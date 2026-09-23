@@ -1,82 +1,63 @@
-# SpendWise Dashboard Shell
+# SpendWise – Personal Budget & Expense Tracker
 
 ## Project Overview
 
-SpendWise is a responsive personal finance dashboard interface designed as the foundation for a future budget and expense tracking application.
+SpendWise is a personal budget and expense tracker designed to help users record their income and expenses and monitor their remaining balance. The project provides a simple interface for entering financial information and displaying expense information in an organized way.
 
-This week's project focuses on creating the visual dashboard structure using HTML and modern CSS techniques. No JavaScript functionality has been added.
+## JavaScript Concepts Implemented
 
-## Dashboard Features
+The project uses JavaScript to add functionality and interactivity to the SpendWise application. The main JavaScript concepts implemented include:
 
-The dashboard contains:
+* Variables
+* User input
+* DOM manipulation
+* Functions
+* Arithmetic calculations
+* Event handling
+* Conditional logic
 
-* A sidebar navigation menu
-* A dashboard header
-* Six financial category cards
-* Responsive layout for smaller screens
-* Hover and keyboard focus micro-interactions
-* CSS custom properties for the application theme
-* Optional dark theme support
+## Variables
 
-## Financial Categories
+Variables are used to store information such as income, expense names, expense amounts, categories, and calculated totals.
 
-The dashboard currently displays static information for:
+For example, variables can store the amount entered by the user and the total amount of expenses. These values are then used when calculating the user's remaining balance.
 
-1. Food
-2. Transport
-3. Rent
-4. Entertainment
-5. Savings
-6. Utilities
+## User Input
 
-## CSS Techniques Used
+User input is collected through HTML form fields. Users can enter information such as:
 
-### CSS Grid
+* Income
+* Expense name
+* Expense amount
+* Expense category
 
-CSS Grid is used to create the overall dashboard layout and arrange the financial cards.
+JavaScript accesses these input values from the webpage and uses them when processing the user's financial information.
 
-### Flexbox
+## Calculations
 
-Flexbox is used for:
+JavaScript performs calculations to help the user understand their budget.
 
-* Sidebar navigation
-* Header layout
-* Profile section
-* Dashboard card content
+For example:
 
-### CSS Custom Properties
+**Remaining Balance = Total Income − Total Expenses**
 
-The color palette is defined using variables in the `:root` selector, including brand, accent, surface, background, primary text, and secondary text colors.
+Expense amounts can also be added together to determine the user's total spending.
 
-### Responsive Design
+## Functions
 
-A media query is used to change the dashboard to a single-column layout below 768px.
+Functions are used to organize the JavaScript code into reusable sections. For example, a function can calculate the remaining balance or process a new expense.
 
-The responsive layout was tested using the browser's DevTools Device Toolbar.
+Using functions makes the code easier to understand, maintain, and update.
 
-### Micro-interactions
+## Technologies Used
 
-Dashboard cards include hover and keyboard focus effects using `transform` and `box-shadow`. The transition duration is 200ms.
+* HTML
+* CSS
+* JavaScript
 
-## Files
+## Project Files
 
-### index.html
-
-Contains the structure and static content of the SpendWise dashboard.
-
-### style.css
-
-Contains the complete styling, layout, responsive design, theme variables, and card micro-interactions.
-
-### README.md
-
-Provides information about the project, its features, and the technologies used.
-
-## Technologies
-
-* HTML5
-* CSS3
-* CSS Grid
-* CSS Flexbox
-* CSS Custom Properties
-* Responsive Design
+* `index.html` – Contains the structure of the SpendWise application.
+* `style.css` – Contains the styling and visual design.
+* `script.js` – Contains the JavaScript functionality.
+* `README.md` – Provides information about the project and the JavaScript concepts used.
