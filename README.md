@@ -1,114 +1,59 @@
-# SpendWise – Personal Budget & Expense Tracker
+# Spendwise Dashboard
 
 ## Project Overview
 
-SpendWise is a personal budget and expense tracker. The project uses HTML and CSS to create the dashboard interface and JavaScript to collect budgeting information, perform calculations, and display the results in the browser console.
+Spendwise Dashboard is a personal budget and expense tracking application designed to help users record and organize their expenses. The application uses HTML, CSS, and JavaScript to provide an interactive interface for entering expenses and displaying them on the dashboard.
 
-The current JavaScript foundation allows the user to enter a total budget and total expenses and then calculates the remaining balance.
+## JavaScript Features
 
-## JavaScript Concepts Implemented
+The `script.js` file connects the expense form to the webpage using JavaScript and DOM manipulation.
 
-The SpendWise project demonstrates the following JavaScript concepts:
+### Event Listener
 
-* Variables
-* Data types
-* User input
-* Type conversion
-* Arithmetic calculations
-* Functions
-* Browser console output
+An event listener is used to detect when the expense form is submitted. The `submit` event triggers the JavaScript function that processes the user's expense information.
 
-## Variables
+The `preventDefault()` method is used to prevent the browser from refreshing the page when the form is submitted. This allows the expense to be processed and displayed immediately on the webpage.
 
-Variables are used to store important budgeting information.
+### Conditionals
 
-The application uses variables for the total budget, total expenses, and remaining balance:
+Conditional statements are used to validate the information entered by the user. The application checks that required fields are not empty and that the expense amount is a valid number.
 
-```javascript
-let budget = 0;
-let expense = 0;
-let remainingBalance = 0;
-```
+Conditional logic is also used to categorize expenses into different levels depending on their amount. This provides additional information about each transaction.
 
-These variables store the values that are used during the budgeting calculation.
+### Arrays
 
-## Data Types
+Expenses are stored as objects inside an `expenses` array. Each expense object contains information such as the expense name, amount, and category.
 
-The project uses numeric data for budgeting and expense calculations.
+Using an array makes it possible to store multiple expense records and process them together.
 
-The `Number()` function is used to convert the values entered through the prompts from text into numbers:
+### DOM Manipulation
 
-```javascript
-budget = Number(prompt("Enter your total budget:"));
-expense = Number(prompt("Enter your total expenses:"));
-```
+DOM manipulation is used to dynamically update the webpage when a new expense is submitted.
 
-This allows JavaScript to perform arithmetic calculations correctly.
+The JavaScript code creates new list items and adds them to the expense list. This means users can see their newly submitted expenses without reloading the page.
 
-## User Input
+The application uses the data stored in the `expenses` array to keep the displayed expense list synchronized with the internal data.
 
-User input is collected using JavaScript `prompt()` dialogs.
+## Challenges Encountered
 
-The application asks the user to enter:
+One challenge was connecting the form submission to the webpage without causing the browser to refresh. I solved this by using an event listener for the form's `submit` event together with `preventDefault()`.
 
-1. Their total budget.
-2. Their total expenses.
+Another challenge was validating user input so that empty entries and invalid expense amounts would not be added to the expense list. Conditional statements were used to handle these situations.
 
-The entered values are stored in variables for processing.
+I also had to understand how to store each expense as an object inside an array and then use array iteration to display the stored information dynamically on the webpage.
 
-## Budget Calculations
+## Future Improvements
 
-SpendWise calculates the remaining balance by subtracting total expenses from the total budget.
+A future improvement is to connect the expense records to the dashboard summary cards. Instead of displaying hardcoded values, the application can calculate category totals dynamically whenever a new expense is added.
 
-The calculation is:
-
-**Remaining Balance = Total Budget - Total Expenses**
-
-For example:
-
-* Total Budget = 50,000
-* Total Expenses = 15,000
-* Remaining Balance = 35,000
-
-## Functions
-
-The project uses a reusable function to organize the budget calculation:
-
-```javascript
-function calculateRemainingBalance(budgetAmount, expenseAmount) {
-    return budgetAmount - expenseAmount;
-}
-```
-
-The function receives the budget and expense amounts as parameters and returns the remaining balance.
-
-Using a function keeps the calculation logic organized and reusable.
-
-## Displaying Results
-
-The results are displayed in the browser console using `console.log()`.
-
-Example output:
-
-
-```text
-===== SpendWise Budget Summary =====
-Total Budget: 50000
-Total Expenses: 15000
-Remaining Balance: 35000
-
-
-The output is clearly labeled so that the user can easily understand the budgeting information.
-
-## Project Files
-
-* `index.html` – Contains the structure of the SpendWise dashboard.
-* `style.css` – Contains the visual styling, layout, responsive design, and theme.
-* `script.js` – Contains the JavaScript variables, user input, calculations, function, and console output.
-* `README.md` – Explains the project and the JavaScript concepts implemented.
+The remaining balance can also be updated automatically based on the user's budget and recorded expenses. This would make the dashboard provide real-time budgeting feedback.
 
 ## Technologies Used
 
 * HTML
 * CSS
 * JavaScript
+* DOM Manipulation
+* Event Listeners
+* Arrays and Objects
+* Conditional Statements
